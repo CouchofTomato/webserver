@@ -26,10 +26,8 @@ server = TCPServer.open(2000)
 
 loop {
 	client = server.accept
-	input = server.read
-	client_response = response(input)
-	client.puts(Time.now.ctime)
-	client.puts(response)
-	client.puts "Closing the connection. Bye!"
+	input = client.recv(1024)
+	#client_response = response(input)
+	client.puts(input)
 	client.close
 }
