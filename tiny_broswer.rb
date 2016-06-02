@@ -10,4 +10,6 @@ socket = TCPSocket.open(host,port)
 socket.print(request)
 response = socket.read
 headers,body = response.split("\r\n\r\n", 2)
+print headers
+print "\n"
 print body

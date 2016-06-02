@@ -41,7 +41,7 @@ def ok_200(file)
 HTTP/1.0 200 OK
 #{Time.now}
 Content-Type: text/html
-Content-Length: #{File.size(file)}\n\n
+Content-Length: #{File.size(file)}\r\n\r\n
 #{file_contents}
 HELLO
 ok_string
